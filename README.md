@@ -1,10 +1,8 @@
-## Name
 
-## Register No
-
-## Exp no:
-
-# Automatic Street Light Controller Using LDR
+# EX NO 3 AUTOMATIC STREET LIGHT CONTROLLER USING LDR
+## NAME : SIVA SAKTHI A
+    
+## REG NO : 212224223005
 
 ## Aim
 
@@ -104,10 +102,39 @@ In audio compressors, this property is applicable.
 * Energy-saving lighting systems
 
 ## Program
+```CPP
+int ldrPin = A0;
+int ledPin = 9;
+int ldrValue;
+int threshold = 500;
 
+void setup()
+{
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  ldrValue = analogRead(ldrPin);
+
+  if (ldrValue < threshold)
+  {
+    digitalWrite(ledPin, HIGH);
+  }
+  else
+  {
+    digitalWrite(ledPin, LOW);
+  }
+
+  delay(500);
+}
+```
 ## Circuit Diagram
+<img width="882" height="524" alt="image" src="https://github.com/user-attachments/assets/02acc874-f524-4fe1-bb49-0ec449c80363" />
 
 ## Output
+<img width="1098" height="589" alt="image" src="https://github.com/user-attachments/assets/c78b7ff0-0690-4ebd-a73a-fbe08a5eec19" />
 
 ## Result
 
